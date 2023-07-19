@@ -82,6 +82,11 @@ footer p {
   color: #faf9f6;
 }
 
+h4 {
+  margin-top: 1em;
+  font-size: 1rem;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -102,6 +107,12 @@ footer p {
   gap: 15px;
 }
 
+.choice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 480px) {
   h1 {
     font-size: 3.5rem;
@@ -113,6 +124,10 @@ footer p {
 
   h3 {
     font-size: 2.3rem;
+  }
+
+  h4 {
+    font-size: 2rem;
   }
 
   hr {

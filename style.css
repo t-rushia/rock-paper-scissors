@@ -24,12 +24,65 @@ header {
 h1 {
   font-family: "Pangolin", cursive;
   color: #fff;
-  font-size: 3.5rem;
+  font-size: 1.85rem;
   font-weight: 400;
 }
 
-@media (max-width: 480px) {
+p {
+  color: #888;
+  line-height: 1.5;
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+#gameresults-el {
+  margin-top: 0.7em;
+  max-width: 60%;
+  text-align: center;
+}
+
+h3 {
+  margin-top: 1em;
+  font-size: 1.1rem;
+}
+
+hr {
+  border: 1px solid #888;
+  border-radius: 2px;
+  width: 30%;
+  margin-top: 0.2em;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2em auto;
+  max-width: 90%;
+}
+
+.scoreboard {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1em;
+}
+
+@media (min-width: 480px) {
   h1 {
-    font-size: 1.85rem;
+    font-size: 3.5rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 2.3rem;
+  }
+
+  hr {
+    border: 2px solid #888;
+    max-width: 15%;
   }
 }

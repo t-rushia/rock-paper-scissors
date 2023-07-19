@@ -18,12 +18,12 @@ header {
   justify-content: center;
   align-items: center;
   height: 5.625em;
-  background: black;
+  background: #888;
 }
 
 h1 {
   font-family: "Pangolin", cursive;
-  color: #fff;
+  color: #faf9f6;
   font-size: 1.85rem;
   font-weight: 400;
 }
@@ -67,6 +67,19 @@ button {
 button:hover {
   background: black;
   box-shadow: 0px 0px 5px #888;
+}
+
+footer {
+  background: #888;
+  display: flex;
+  justify-content: center;
+  margin-top: auto;
+  align-items: center;
+  height: 2.5em;
+}
+
+footer p {
+  color: #faf9f6;
 }
 
 .container {
@@ -114,5 +127,13 @@ button:hover {
 
   button {
     font-size: 3.5rem;
+  }
+
+  footer {
+    height: 4em;
+  }
+
+  footer p {
+    font-size: 1rem;
   }
 }

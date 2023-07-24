@@ -15,15 +15,32 @@ function getComputerChoice() {
 
 rockChoice.addEventListener("click", function () {
   playerChoice = "Rock";
+  playRound();
   return playerChoice;
 });
 
 paperChoice.addEventListener("click", function () {
   playerChoice = "Paper";
+  playRound();
   return playerChoice;
 });
 
 scissorsChoice.addEventListener("click", function () {
   playerChoice = "Scissors";
+  playRound();
   return playerChoice;
 });
+
+function playRound(playerChoice, computerChoice) {
+  if (
+    (playerChoice === "Rock" && computerChoice === "Scissors") ||
+    (playerChoice === "Paper" && computerChoice === "Rock") ||
+    (playerChoice === "Scissors" && computerChoice === "Paper")
+  ) {
+    return "Win";
+  } else if (playerChoice === computerChoice) {
+    return "Tie";
+  } else {
+    return "Lose";
+  }
+}

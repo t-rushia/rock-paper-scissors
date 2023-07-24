@@ -1,7 +1,11 @@
 let playerScore = 0;
+let playerTotalWins = 0;
 let playerChoice = "";
 let computerScore = 0;
+let computerTotalWins = 0;
 let computerChoice = "";
+let totalPlayerWins = document.querySelector("#playertotalwins-el");
+let totalComputerWins = document.querySelector("#computertotalwins-el");
 let gameResults = document.querySelector("#gameresults-el");
 let playerScoreTotal = document.querySelector("#playerscore-el");
 let computerScoreTotal = document.querySelector("#computerscore-el");
@@ -61,7 +65,28 @@ function playRound(playerChoice, computerChoice) {
 function checkWinner(playerScore, computerScore) {
   if (playerScore === 5) {
     gameResults.textContent = "Congratulations you have won the game!";
+    playerTotalWins++;
+    endGame();
+    if (playerTotalWins <= 1) {
+      totalPlayerWins.textContent = `${playerTotalWins} time`;
+    } else {
+      totalPlayerWins.textContent = `${playerTotalWins} times`;
+    }
   } else if (computerScore === 5) {
     gameResults.textContent = "Sorry you lose.";
+    computerTotalWins++;
+    endGame();
+    if (computerTotalWins <= 1) {
+      totalComputerWins.textContent = `${computerTotalWins} time`;
+    } else {
+      totalComputerWins.textContent = `${computerTotalWins} times`;
+    }
   }
+}
+
+function endGame() {
+  playerScore = 0;
+  computerScore = 0;
+  playerScoreTotal.textContent = `Player: ${playerScore}`;
+  computerScoreTotal.textContent = `Computer: ${computerScore}`;
 }
